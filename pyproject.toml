@@ -1,19 +1,20 @@
 [project]
-name = "fantasy-football-drafter-v2"
-version = "0.1.0"
+name = "fantasy-football-drafter"
+version = "0.0.1"
 description = "A reinforcement learning-based fantasy football draft assistant"
+
 authors = [
-    {name = "Tarek", email = "tarek@example.com"}
+    {name = "Tarek", email = "tareksallam@cmail.carleton.ca"}
 ]
+
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = []
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
-    "black>=23.0.0",
-    "flake8>=6.0.0",
+    "ruff>=0.0.284",
+    "mypy>=1.0.0",
 ]
 
 [build-system]
@@ -26,9 +27,10 @@ packages = ["fantasy_football_drafter_v2"]
 [tool.hatch.build.targets.wheel]
 packages = ["fantasy_football_drafter_v2"]
 
-[tool.black]
+[tool.ruff]
+select = ["E", "F"]
 line-length = 88
-target-version = ['py38']
+target-version = "py38"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
