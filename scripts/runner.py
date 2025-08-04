@@ -1,6 +1,6 @@
 from pathlib import Path
 from datetime import datetime
-from fantasy_drafter.data import PlayerScraper
+from fantasydrafter.data import PlayerScraper
 
 def main():
     YEAR = 2025
