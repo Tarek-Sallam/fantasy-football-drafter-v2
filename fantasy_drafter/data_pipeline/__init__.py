@@ -1,3 +1,3 @@
-from .scraper import PlayerScraper
+from .PlayerScraper import PlayerScraper
 
 __all__ = ['PlayerScraper']
