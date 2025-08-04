@@ -35,7 +35,7 @@ class PlayerScraper:
             return None
     
     def get_players_by_letter(self, letter: str) -> None:
-        url = f"{self.BASE_URL}/{letter.upper()}/"
+        url = f"{self.BASE_URL}{letter.upper()}/"
         try:
             soup = self._make_request(url)
             player_content = soup.find("div", {"id": "all_players"}).find("div", {"id": "div_players"})
@@ -75,7 +75,7 @@ class PlayerScraper:
                 player_df = self.players
             
             for name, link in player_df["Name"], player_df["Link"]:
-                url = f"{self.BASE_URL}/{link}/"
+                url = f"{self.BASE_URL}{link}/"
                 soup = self._make_request(url)
                 
                 

@@ -11,7 +11,7 @@ def main():
         scraper = PlayerScraper(year=YEAR, delay=DELAY)
         
         print(f"Scraping NFL player data for {YEAR} season...")
-        players = scraper.get_players()
+        players = scraper.get_all_players()
         
         if not players:
             print("No player data was scraped. Exiting.")
@@ -19,13 +19,9 @@ def main():
             
         print(f"Successfully scraped data for {len(players)} players")
         
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"players_{YEAR}_{timestamp}.csv"
-        output_path = OUTPUT_DIR / filename
-        
-        print(f"Saving data to {output_path}")
-        scraper.save_players_to_csv(players, str(output_path))
-        print("Pipeline completed successfully")
+        scraper.cache_players(OUTPUT_DIR)
+
+        print(f"Successfully cached players and links to {OUTPUT_DIR}")
         
         return 0
         
