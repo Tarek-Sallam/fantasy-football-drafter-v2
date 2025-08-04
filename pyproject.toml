@@ -1,5 +1,5 @@
 [project]
-name = "fantasy-football-drafter"
+name = "FantasyFootballDrafter"
 version = "0.0.1"
 description = "A reinforcement learning-based fantasy football draft assistant"
 
@@ -22,10 +22,10 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build]
-packages = ["fantasy_football_drafter_v2"]
+packages = ["FantasyFootballDrafter"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["fantasy_football_drafter_v2"]
+packages = ["FantasyFootballDrafter"]
 
 [tool.ruff]
 select = ["E", "F"]
