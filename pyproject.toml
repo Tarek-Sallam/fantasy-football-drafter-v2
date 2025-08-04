@@ -1,5 +1,5 @@
 [project]
-name = "FantasyFootballDrafter"
+name = "fantasydrafter"
 version = "0.0.1"
 description = "A reinforcement learning-based fantasy football draft assistant"
 
@@ -15,6 +15,7 @@ dev = [
     "pytest>=7.0.0",
     "ruff>=0.0.284",
     "mypy>=1.0.0",
+    "requests>=2.32.4",
 ]
 
 [build-system]
@@ -22,10 +23,10 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build]
-packages = ["FantasyFootballDrafter"]
+packages = ["fantasydrafter"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["FantasyFootballDrafter"]
+packages = ["fantasydrafter"]
 
 [tool.ruff]
 select = ["E", "F"]
